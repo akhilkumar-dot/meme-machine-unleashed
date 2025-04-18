@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Meme generator specific colors
+				meme: {
+					blue: '#1EAEDB',
+					purple: '#9b87f5',
+					pink: '#D946EF',
+					orange: '#F97316',
 				}
 			},
 			borderRadius: {
@@ -84,11 +92,32 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-slight': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' }
+				},
+				'pulse-slight': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' }
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-slight': 'bounce-slight 2s ease-in-out infinite',
+				'pulse-slight': 'pulse-slight 2s ease-in-out infinite',
+				'spin-slow': 'spin-slow 8s linear infinite'
+			},
+			fontFamily: {
+				'comic': ['"Comic Neue"', 'cursive'],
+			},
+			backgroundImage: {
+				'gradient-fun': 'linear-gradient(90deg, #D946EF 0%, #9b87f5 50%, #1EAEDB 100%)',
 			}
 		}
 	},
